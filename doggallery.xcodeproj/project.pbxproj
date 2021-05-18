@@ -99,8 +99,9 @@
 		96B1D4D12653A5E60027C7D7 /* doggallery */ = {
 			isa = PBXGroup;
 			children = (
-				96B1D4D22653A5E60027C7D7 /* AppDelegate.swift */,
-				96B1D4D42653A5E60027C7D7 /* SceneDelegate.swift */,
+				96B1D5042653AEFE0027C7D7 /* DataModels */,
+				96B1D5032653AEF20027C7D7 /* ViewControllers */,
+				96B1D5022653AE740027C7D7 /* AppDelegate */,
 				96B1D4D62653A5E60027C7D7 /* ViewController.swift */,
 				96B1D4D82653A5E60027C7D7 /* Main.storyboard */,
 				96B1D4DB2653A5E70027C7D7 /* Assets.xcassets */,
@@ -126,6 +127,29 @@
 				96B1D4F62653A5E70027C7D7 /* Info.plist */,
 			);
 			path = doggalleryUITests;
+			sourceTree = "<group>";
+		};
+		96B1D5022653AE740027C7D7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				96B1D4D22653A5E60027C7D7 /* AppDelegate.swift */,
+				96B1D4D42653A5E60027C7D7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		96B1D5032653AEF20027C7D7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		96B1D5042653AEFE0027C7D7 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +462,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = doggallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = doggallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
