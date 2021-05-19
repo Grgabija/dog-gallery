@@ -8,10 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
-    // MARK: - Outlets
-    @IBOutlet weak var galleryTitle: UILabel!
     
     // MARK: - Methods
     // MARK: Lifecycle
@@ -20,4 +16,3 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
-
