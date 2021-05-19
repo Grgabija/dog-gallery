@@ -13,8 +13,9 @@
 		96B1D4DA2653A5E60027C7D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1D4D82653A5E60027C7D7 /* Main.storyboard */; };
 		96B1D4DC2653A5E70027C7D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B1D4DB2653A5E70027C7D7 /* Assets.xcassets */; };
 		96B1D4DF2653A5E70027C7D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1D4DD2653A5E70027C7D7 /* LaunchScreen.storyboard */; };
-		96B1D4EA2653A5E70027C7D7 /* doggalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D4E92653A5E70027C7D7 /* doggalleryTests.swift */; };
-		96B1D4F52653A5E70027C7D7 /* doggalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D4F42653A5E70027C7D7 /* doggalleryUITests.swift */; };
+		96B1D50A265426BF0027C7D7 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D509265426BF0027C7D7 /* DogImage.swift */; };
+		96B1D50C26542AD60027C7D7 /* dog_urls.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B1D50B26542AD50027C7D7 /* dog_urls.json */; };
+		96B1D50E265433D80027C7D7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D50D265433D80027C7D7 /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,10 @@
 		96B1D4DE2653A5E70027C7D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B1D4E02653A5E70027C7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B1D4E52653A5E70027C7D7 /* doggalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doggalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96B1D4E92653A5E70027C7D7 /* doggalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doggalleryTests.swift; sourceTree = "<group>"; };
-		96B1D4EB2653A5E70027C7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B1D4F02653A5E70027C7D7 /* doggalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doggalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96B1D4F42653A5E70027C7D7 /* doggalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doggalleryUITests.swift; sourceTree = "<group>"; };
-		96B1D4F62653A5E70027C7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B1D509265426BF0027C7D7 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
+		96B1D50B26542AD50027C7D7 /* dog_urls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_urls.json; sourceTree = "<group>"; };
+		96B1D50D265433D80027C7D7 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				96B1D4D12653A5E60027C7D7 /* doggallery */,
-				96B1D4E82653A5E70027C7D7 /* doggalleryTests */,
-				96B1D4F32653A5E70027C7D7 /* doggalleryUITests */,
 				96B1D4D02653A5E60027C7D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,34 +97,17 @@
 		96B1D4D12653A5E60027C7D7 /* doggallery */ = {
 			isa = PBXGroup;
 			children = (
+				96B1D51126545EE00027C7D7 /* Data */,
+				96B1D51026545E9D0027C7D7 /* DataEntities */,
 				96B1D5042653AEFE0027C7D7 /* DataModels */,
 				96B1D5032653AEF20027C7D7 /* ViewControllers */,
 				96B1D5022653AE740027C7D7 /* AppDelegate */,
-				96B1D4D62653A5E60027C7D7 /* ViewController.swift */,
 				96B1D4D82653A5E60027C7D7 /* Main.storyboard */,
 				96B1D4DB2653A5E70027C7D7 /* Assets.xcassets */,
 				96B1D4DD2653A5E70027C7D7 /* LaunchScreen.storyboard */,
 				96B1D4E02653A5E70027C7D7 /* Info.plist */,
 			);
 			path = doggallery;
-			sourceTree = "<group>";
-		};
-		96B1D4E82653A5E70027C7D7 /* doggalleryTests */ = {
-			isa = PBXGroup;
-			children = (
-				96B1D4E92653A5E70027C7D7 /* doggalleryTests.swift */,
-				96B1D4EB2653A5E70027C7D7 /* Info.plist */,
-			);
-			path = doggalleryTests;
-			sourceTree = "<group>";
-		};
-		96B1D4F32653A5E70027C7D7 /* doggalleryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				96B1D4F42653A5E70027C7D7 /* doggalleryUITests.swift */,
-				96B1D4F62653A5E70027C7D7 /* Info.plist */,
-			);
-			path = doggalleryUITests;
 			sourceTree = "<group>";
 		};
 		96B1D5022653AE740027C7D7 /* AppDelegate */ = {
@@ -141,6 +122,7 @@
 		96B1D5032653AEF20027C7D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96B1D4D62653A5E60027C7D7 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,8 +130,33 @@
 		96B1D5042653AEFE0027C7D7 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				96B1D50F265452CC0027C7D7 /* Tools */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		96B1D50F265452CC0027C7D7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				96B1D50D265433D80027C7D7 /* JSONParser.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		96B1D51026545E9D0027C7D7 /* DataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				96B1D509265426BF0027C7D7 /* DogImage.swift */,
+			);
+			path = DataEntities;
+			sourceTree = "<group>";
+		};
+		96B1D51126545EE00027C7D7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				96B1D50B26542AD50027C7D7 /* dog_urls.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B1D50C26542AD60027C7D7 /* dog_urls.json in Resources */,
 				96B1D4DF2653A5E70027C7D7 /* LaunchScreen.storyboard in Resources */,
 				96B1D4DC2653A5E70027C7D7 /* Assets.xcassets in Resources */,
 				96B1D4DA2653A5E60027C7D7 /* Main.storyboard in Resources */,
@@ -284,6 +292,8 @@
 			files = (
 				96B1D4D72653A5E60027C7D7 /* ViewController.swift in Sources */,
 				96B1D4D32653A5E60027C7D7 /* AppDelegate.swift in Sources */,
+				96B1D50E265433D80027C7D7 /* JSONParser.swift in Sources */,
+				96B1D50A265426BF0027C7D7 /* DogImage.swift in Sources */,
 				96B1D4D52653A5E60027C7D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B1D4EA2653A5E70027C7D7 /* doggalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B1D4F52653A5E70027C7D7 /* doggalleryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
