@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		963D1CFB26555E1E00301A4C /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D1CFA26555E1E00301A4C /* ImageDataModel.swift */; };
 		963D1CFD26556F9300301A4C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D1CFC26556F9300301A4C /* ImageCollectionViewCell.swift */; };
+		963D1D00265694C200301A4C /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D1CFF265694C200301A4C /* ImagePreviewViewController.swift */; };
 		96B1D4D32653A5E60027C7D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D4D22653A5E60027C7D7 /* AppDelegate.swift */; };
 		96B1D4D52653A5E60027C7D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D4D42653A5E60027C7D7 /* SceneDelegate.swift */; };
 		96B1D4D72653A5E60027C7D7 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1D4D62653A5E60027C7D7 /* ImageCollectionViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		963D1CFA26555E1E00301A4C /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		963D1CFC26556F9300301A4C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		963D1CFF265694C200301A4C /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		96B1D4CF2653A5E60027C7D7 /* doggallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doggallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1D4D22653A5E60027C7D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B1D4D42653A5E60027C7D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				963D1CFE2655853D00301A4C /* Views */,
 				96B1D4D62653A5E60027C7D7 /* ImageCollectionViewController.swift */,
+				963D1CFF265694C200301A4C /* ImagePreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				96B1D4D72653A5E60027C7D7 /* ImageCollectionViewController.swift in Sources */,
 				963D1CFB26555E1E00301A4C /* ImageDataModel.swift in Sources */,
 				96B1D4D32653A5E60027C7D7 /* AppDelegate.swift in Sources */,
+				963D1D00265694C200301A4C /* ImagePreviewViewController.swift in Sources */,
 				963D1CFD26556F9300301A4C /* ImageCollectionViewCell.swift in Sources */,
 				96B1D50E265433D80027C7D7 /* JSONParser.swift in Sources */,
 				96B1D50A265426BF0027C7D7 /* DogImage.swift in Sources */,
