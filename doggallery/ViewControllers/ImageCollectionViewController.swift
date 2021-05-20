@@ -11,6 +11,7 @@ class ImageCollectionViewController: UICollectionViewController {
     
     // MARK: - Declarations
     var selectedImage: UIImage!
+    let imageDataModel = ImageDataModel(JSONParser())
     
     struct Storyboard {
         static let imageCell = "ImageCollectionViewCell"
@@ -33,19 +34,30 @@ class ImageCollectionViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: imageWidth, height: imageWidth)
     }
     
+    // MARK: - ImageListSize
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return imageDataModel.calculateImageListSize()
     }
     
+    // MARK: - Cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.imageCell, for: indexPath) as! ImageCollectionViewCell
+
+        guard let imageData = imageDataModel.fetchImages(index: indexPath.item) else {
+            return cell
+        }
         
+        cell.imageView.image = UIImage(data: imageData)
         return cell
     }
     
     //MARK: - UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedImage = UIImage(named: "paw")
+        guard let imageData = imageDataModel.fetchImages(index: indexPath.item) else {
+            return
+        }
+        
+        selectedImage = UIImage(data: imageData)
         performSegue(withIdentifier: Storyboard.imagePreviewControllerSegue, sender: selectedImage)
     }
     
