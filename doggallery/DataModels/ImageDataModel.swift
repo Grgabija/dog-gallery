@@ -21,27 +21,19 @@ class ImageDataModel {
     }
     
     // MARK: - Methods
-    func fetchImages(index: Int) -> Data? {
-        guard let urls = urlList?.urls else {
-            return nil
+    func fetchImage(index: Int, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        guard let urls = urlList?.urls, let url = URL(string: urls[index]) else {
+            return
         }
         
-        do {
-            let url = URL(string: urls[index])!
-            let data = try Data(contentsOf: url)
-            return data
-        } catch {
-            print(error)
-        }
-        return nil
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
     func calculateImageListSize() -> Int {
-        
-        guard let urls = urlList?.urls else {
+        guard let imageListSize = urlList?.urls.count else {
             return 0
         }
-        let imageListSize = urls.count
+        
         return imageListSize
     }
 }

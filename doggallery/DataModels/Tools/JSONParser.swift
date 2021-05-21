@@ -14,7 +14,6 @@ class JSONParser {
     func parse(forName name: String) -> DogImage? {
         if let data = readLocalFile(forName: name) {
             let parsedData = decode(jsonData: data)
-            
             return parsedData
         }
         print("parsing error")
@@ -37,7 +36,6 @@ class JSONParser {
     private func decode(jsonData: Data) -> DogImage? {
         do {
             let decodedData = try JSONDecoder().decode(DogImage.self, from: jsonData)
-            
             return decodedData
         } catch {
             print("decode error: \(error)")

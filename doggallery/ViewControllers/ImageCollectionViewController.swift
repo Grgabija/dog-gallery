@@ -42,23 +42,32 @@ class ImageCollectionViewController: UICollectionViewController {
     // MARK: - Cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.imageCell, for: indexPath) as! ImageCollectionViewCell
-
-        guard let imageData = imageDataModel.fetchImages(index: indexPath.item) else {
-            return cell
-        }
         
-        cell.imageView.image = UIImage(data: imageData)
+        imageDataModel.fetchImage(index: indexPath.item) { data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            DispatchQueue.main.async() {
+                cell.imageView.image = UIImage(data: data)
+            }
+        }
         return cell
     }
     
     //MARK: - UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let imageData = imageDataModel.fetchImages(index: indexPath.item) else {
-            return
+        imageDataModel.fetchImage(index: indexPath.item) { data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            self.selectedImage = UIImage(data: data)
+            
+            DispatchQueue.main.async() {
+                self.performSegue(withIdentifier: Storyboard.imagePreviewControllerSegue, sender: self.selectedImage)
+            }
         }
-        
-        selectedImage = UIImage(data: imageData)
-        performSegue(withIdentifier: Storyboard.imagePreviewControllerSegue, sender: selectedImage)
     }
     
     //MARK: - Navigation

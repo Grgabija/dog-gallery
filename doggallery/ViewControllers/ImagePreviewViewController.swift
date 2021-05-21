@@ -16,7 +16,4 @@ class ImagePreviewViewController: UIViewController {
         super.viewDidLoad()
         imagePreview.image = image
     }
-
-    
-    
 }
